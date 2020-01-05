@@ -1,0 +1,343 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .name {
+  font-size: 50px;
+  margin-bottom: 32px;
+}
+
+.home .name .second-nm {
+  color: #e9b407;
+  font-weight: 700;
+}
+
+.home input {
+  font-size: 18px;
+  padding: 6px 20px;
+  margin-top: 32px;
+  border-color: white;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #e9b407;
+}
+
+.home input:hover {
+  background-color: transparent;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.menu-btn {
+  position: absolute;
+  right: 0px;
+  top: 8px;
+  height: 3px;
+  width: 28px;
+  background: white;
+}
+
+.menu-btn::before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: -8px;
+  height: 3px;
+  width: 28px;
+  background: white;
+}
+
+.menu-btn::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 8px;
+  height: 3px;
+  width: 28px;
+  background: white;
+}
+
+.menu-btn.open {
+  background: transparent;
+}
+
+.menu-btn.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 6px);
+          transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-btn.open::after {
+  -webkit-transform: rotate(-45deg) translate(5px, -6px);
+          transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.nav.open {
+  z-index: 3;
+}
+
+.nav .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-menu.open {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #077697;
+  padding-right: 16px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .nav-menu .navItem {
+  text-align: center;
+  padding: 20px;
+}
+
+.nav .nav-menu .navItem .navlink {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.nav .nav-menu .navItem .navlink.active {
+  color: #e9b407;
+}
+
+.nav .nav-menu .navItem .navlink:hover {
+  color: #e9b407;
+}
+
+.work {
+  height: 100%;
+  padding: 50px;
+  text-align: center;
+  margin: 0;
+}
+
+.work .name {
+  font-size: 50px;
+  padding: 40px 0 20px 0;
+}
+
+.work .name .second-nm {
+  color: #e9b407;
+  font-weight: 700;
+}
+
+.work .projects {
+  width: 70%;
+  margin: 50px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+
+.work .projects img {
+  border: 3px white solid;
+  width: 100%;
+}
+
+.work .projects img:hover {
+  opacity: 0.5;
+  border-color: #e9b407;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.work .btn, .work .btn-dark, .work .btn-light {
+  display: block;
+  padding: 8px 16px;
+}
+
+.work .btn:hover, .work .btn-dark:hover, .work .btn-light:hover {
+  background: #e9b407;
+  color: black;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.work .btn-dark {
+  background: black;
+  color: white;
+}
+
+.work .btn-light {
+  background: white;
+  color: black;
+}
+
+.work .contact {
+  width: 80%;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work .contact div {
+  font-size: 25px;
+  border: 3px white solid;
+  padding: 30px 40px;
+  margin: 20px 0;
+}
+
+.work .contact div span {
+  font-size: 30px;
+  color: #e9b407;
+}
+
+.work .contact div:hover {
+  background-color: #e9b407;
+  color: black;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.work .contact div:hover span {
+  color: black;
+}
+
+.work .socialicon a {
+  padding: 8px;
+}
+
+.work .socialicon a:hover {
+  color: #e9b407;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 660px) {
+  .header {
+    z-index: 2;
+  }
+  .menu .menu-btn {
+    visibility: visible;
+  }
+  .nav {
+    z-index: -1;
+  }
+  .nav .nav-menu {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  .home .name {
+    font-size: 35px;
+  }
+  .work .name {
+    font-size: 40px;
+    padding: 10px 0 10px 0;
+  }
+  .work .contact {
+    width: 98%;
+  }
+  .work .contact div {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .work {
+    padding: 50px 0;
+  }
+  .work .projects {
+    width: 90%;
+  }
+}
+
+body {
+  background: #077697;
+  color: white;
+  height: 100vh;
+  line-height: 1;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 30px;
+}
+
+main {
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */
