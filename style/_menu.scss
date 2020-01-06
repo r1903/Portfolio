@@ -1,0 +1,101 @@
+// Style for menu and menu button
+.menu{
+    position: fixed;
+    right:16px;
+    top:16px;
+    height:20px;
+    width:28px;
+    cursor:pointer;
+    @include transition-ease;
+    visibility:hidden;
+
+    &-btn {
+        position: absolute;
+        right:0px;
+        top:8px;
+        height:3px;
+        width:28px; 
+        background: set-text-color($primary-color);
+        
+        &::before{
+            content:'';
+            position: absolute;
+            right:0px;
+            top:-8px;
+            height:3px;
+            width:28px; 
+            background: set-text-color($primary-color);
+
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            right:0px;
+            top:8px;
+            height:3px;
+            width:28px; 
+            background: set-text-color($primary-color);
+        }
+// Style for menu button after clicking on it
+        &.open{
+            background:transparent;
+
+            &::before{
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+            &::after{
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+        }
+    }
+}
+
+// Style for nav element
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    &.open{
+        z-index:3;
+    }
+// Style for nav menu
+    .nav-menu{
+        
+        display:flex;
+        list-style-type: none;
+        align-items: center;
+// Style for nav menu after clicking a menu button
+        &.open{
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+        height:100vh;
+        overflow:hidden;
+        background:$primary-color;
+        padding-right:16px;
+        transform: translateY(0);
+        @include transition-ease;
+        }
+// Style for nav items    
+        .navItem{
+            text-align:center;
+            padding:20px;
+// Style for nav item  links
+            .navlink{
+                display:inline-block;
+                color:set-text-color($primary-color);
+                font-size:20px;
+                text-transform: uppercase; 
+                padding:10px;
+                &.active{
+                 color:$secondary-color;  
+                }
+                &:hover{
+                color:$secondary-color;
+                }
+            }
+        }
+    }
+}
+

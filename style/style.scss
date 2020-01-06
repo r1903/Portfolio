@@ -1,0 +1,38 @@
+//importing modules
+@import "variables";
+@import "home";
+@import "menu";
+@import "work";
+@import "contact";
+@import "responsive";
+
+
+body{
+    background:$primary-color;
+    color:set-text-color($primary-color);
+    height:100vh;
+    line-height: 1; 
+}
+
+h1,h2{
+    font-weight:400;
+}
+
+a{
+    text-decoration:none;
+    color:set-text-color($primary-color);
+}
+
+header{
+    position:fixed;
+    width:100%;
+    padding:30px;
+}
+
+
+main{
+    height:100%; 
+}
+
+
+

@@ -1,0 +1,33 @@
+// assigning primary and secondary colors
+$primary-color:rgb(7, 118, 151);
+$secondary-color:rgb(233, 180, 7);
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
+@mixin transition-ease {
+    transition:all 0.5s ease-in-out;
+}
+
+@function set-text-color($color){
+    @if(lightness($color) > 40%){
+        @return black;
+    }@else{
+        @return white;
+    }
+}
+
+@mixin media-md{
+    @media screen and (max-width:660px){
+        @content;
+    }
+}
+@mixin media-small{
+    @media screen and (max-width:500px){
+        @content;
+    }
+}

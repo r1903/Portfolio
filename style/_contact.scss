@@ -1,0 +1,42 @@
+//styles for contact me page
+.work{
+//styles for contact items    
+    .contact{
+        width:80%;
+        margin:40px auto;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-evenly;
+        align-items:center;
+        div{
+            font-size : 25px;
+            border:3px set-text-color($primary-color) solid;
+            padding:30px 40px;
+            margin:20px 0;
+            & span{
+                    font-size : 30px;
+                    color:$secondary-color;
+                }
+        
+            &:hover{
+                background-color: $secondary-color;
+                color:set-text-color($secondary-color);
+                @include transition-ease;
+                span{
+                    color:set-text-color($secondary-color);   
+                }
+            }
+        }
+    }
+    
+    //styles for linkdin button
+    .socialicon a{
+        padding:8px;
+        &:hover{
+        color: $secondary-color;
+        @include transition-ease;
+        }
+
+    }
+
+}

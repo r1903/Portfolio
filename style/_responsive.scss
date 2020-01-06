@@ -1,0 +1,49 @@
+// style for small screen (max-width:660px)
+@include media-md {
+    .header{
+        z-index:2;  
+    }
+
+    .menu{
+        .menu-btn{
+            visibility:visible;  
+          }
+    }
+
+    .nav{
+        z-index:-1;  
+        .nav-menu{
+            transform: translateY(-100%);     
+        }
+    }
+    .home{
+        .name {
+            font-size : 35px;
+        }
+    }
+
+    .work{
+        .name {
+            font-size : 40px;
+            padding:10px 0 10px 0;
+        }
+        .contact{
+            width:98%;
+            div{
+                padding:30px 20px; 
+                }
+
+        }
+    }
+}
+
+// style for small screen (max-width:500px)
+@include media-small{
+    .work{
+        
+        padding:50px 0;
+        .projects{
+            width:90%;        
+        }
+    }
+}
